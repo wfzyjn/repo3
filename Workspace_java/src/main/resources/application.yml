@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+# 配置日志
+mybatis-plus:
+     configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#配置内型别名所对应的包
+     type-aliases-package: com.itheima.mybatis_plus.pojo
+     type-enums-package: com.itheima.enums
+# 配置实体类所对应表的前缀
+#     global-config:
+#       db-config:
+#         table-prefix: t_
+# 配置统一主键生长策越   id-type: assign_id
+#扫描通用枚举所对应的包

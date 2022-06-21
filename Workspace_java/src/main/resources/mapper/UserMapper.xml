@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.UserMapper">
+   <!-- Map<String,Object>  SelectMapById(long id);-->
+ <select id="selectMapById" resultType="map">
+select id,name,age,emall from USER  where id=#{id};
+ </select>
+  <!--  Page<User>  selectPageVo(@Param("page") Page<User> page, @Param("age") Integer age);  根据-->
+<select id="selectPageVo" resultType="user">
+    select id,name,age,emall from  t_user  where age>#{age}
+
+</select>
+</mapper>
